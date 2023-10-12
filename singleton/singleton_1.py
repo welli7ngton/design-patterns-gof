@@ -13,6 +13,8 @@ class AppSettings:
         return cls._instace
 
     def __init__(self) -> None:
+        # o init será chamado todas as vezes que a classe for instanciada
+        # causando um problema no singleton.
         self.theme = 'dark'
 
 
