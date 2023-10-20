@@ -3,6 +3,7 @@ from abc import ABC, abstractmethod
 
 class IObervable(ABC):
     @property
+    @abstractmethod
     def state(self): pass
 
     @abstractmethod
@@ -90,3 +91,11 @@ if __name__ == '__main__':
     elon_musk.remove_observer(user1)
 
     elon_musk.state = Notification('New X update', 'Social media', '45:00')
+
+    mark_zuckerberg = ContentCreator('Mark Zuckerberg')
+
+    wellington = Subscriber('welli7ngton', mark_zuckerberg)
+
+    mark_zuckerberg.add_observer(wellington)
+
+    mark_zuckerberg.state = Notification('New Movie', 'Custom Content', '2')
