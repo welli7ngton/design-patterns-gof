@@ -40,6 +40,8 @@ class Notification:
         }
 
 
+# in theses classes we have an many-to-many relationship using the Youtube
+# notification logic.
 class YoutubeChannel(IObervable):
     def __init__(self, channel_name: str) -> None:
         self.channel_name = channel_name
